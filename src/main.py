@@ -46,18 +46,18 @@ data = pd.DataFrame({
 st.subheader('Resultado: ')
 
 
-f, ax = plt.subplots(figsize=(7, 4))
+# f, ax = plt.subplots(figsize=(7, 4))
 
-ax.plot(data['t'], data['y_1'])
-ax.plot(data['t'], data['y_2'])
-ax.plot(data['t'], data['Soma'], '--')
-ax.legend(['$y_1$', '$y_2$', '$y_1 + y_2$'])
+# ax.plot(data['t'], data['y_1'])
+# ax.plot(data['t'], data['y_2'])
+# ax.plot(data['t'], data['Soma'], '--')
+# ax.legend(['$y_1$', '$y_2$', '$y_1 + y_2$'])
 
-st.pyplot(f)
+# st.pyplot(f)
 
-# fig = px.line(
-#     data,
-#     x="t",
-#     y=['y_1', 'y_2', 'Soma'],
-# )
-# st.plotly_chart(fig)
+fig = px.line(
+    data,
+    x="t",
+    y=['y_1', 'y_2', 'Soma'],
+)
+st.plotly_chart(fig)
